@@ -1,0 +1,83 @@
+<!-- Instructions: Rick Hammer is a carpenter who wants an application to compute the price of any desk a customer orders, based on the following: desk length and width in inches, type of wood, and number of drawers. The price is computed as follows: -->
+
+<!-- The charge for all desks is a minimum $200. -->
+<!-- If the surface (length * width) is over 750 square inches, add $50. -->
+<!-- If the wood is mahogany add $150; for oak, add $125. No charge is added for pine. -->
+<!-- For every drawer in the desk, there is an additional $30 charge. -->
+
+<!-- Design a flowchart or psuedocode for a program that accepts data for an order number, customer name, length, and width of the desk ordered, type of wood, and number of drawers. Display all the entered data and the final price for the desk. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Rick Hammer</title>
+</head>
+<body>
+  
+  <div class="container pt-5">
+    <p class="fs-4 mb-4">Rick Hammer</p>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <p class="fs-6 mb-4">Price of desk: $200</p>
+        <p class="fs-6 mb-4">If over 750 square inches size - add $50</p>
+        <p class="fs-6 mb-4">If wood is mahogany - add $150</p>
+        <p class="fs-6 mb-4">If wood is oak - add $125</p>
+        <p class="fs-6 mb-4">If wood is pine - no added charges</p>
+        <p class="fs-6 mb-4">Every drawer - add $30</p>
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-12">
+        <label for="desk" class="form-label">How many desk:</label>
+        <input class="form-control mt-2" type="text" id="desk" aria-label="default input example">
+        <label for="desklength" class="form-label mt-4">Enter your desired length:</label>
+        <input class="form-control mt-2" type="text" id="desklength" aria-label="default input example">
+        <label for="deskwidth" class="form-label mt-4">Enter your desired width:</label>
+        <input class="form-control mt-2" type="text" id="deskwidth" aria-label="default input example">
+        <label for="woodType" class="form-label mt-2">Select wood type:</label>
+        <select class="form-select mt-1" id="woodType" aria-label="Default select example">
+          <option selected disabled>..</option>
+          <option value="1">Mahogany</option>
+          <option value="2">Oak</option>
+          <option value="3">Pine</option>
+        </select><br>
+        <label for="drawers" class="form-label">How many drawers:</label>
+        <input class="form-control mt-2" type="text" id="drawers"  aria-label="default input example">
+
+
+        <button type="button" id="order" class="btn btn-primary mt-4">Order</button>
+
+        <div class="result mt-4">
+          <div id="orderResult">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./rickHammer.js"></script>
+</body>
+</html>
+
+
+
+<!-- A. Modify the cottages rental program to display guest's data only if the stay starts in month 9 and lasts more than 10 days. -->
+
+<!-- B. Modify the cottage rental program to display the guest's data only if the total bill is more than $1000. -->
+
+<!-- C. Modify the cottage rental program to prompt the user for a month and day after the guest's rental data has been entered. Display the guest's data only if the specified date falls within the guest's stay. -->
